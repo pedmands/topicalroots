@@ -1,0 +1,50 @@
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	} // before & after
+	&:after {
+		clear: both;
+	}
+} // clearfix
+
+@mixin backImage(
+	$image,
+	$grDir: to bottom,
+	$opStart: 0,
+	$opEnd: 0,
+	$bgPos: center center
+	) {
+	background: linear-gradient(
+		$grDir,
+		rgba(0,0,0, $opStart),
+		rgba(0,0,0, $opEnd)
+		), url($image);
+	background-repeat: no-repeat;
+	background-position: $bgPos;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}// backImage
+
+@mixin stripesDiag(
+	$color1,
+	$color2
+	){
+	background: linear-gradient(45deg,
+		$color1 25%, $color2 0, $color2 50%,
+		$color1 0, $color1 75%, $color2 0);
+	background-size: 100px 100px;
+}// stripesDiag
+
+@mixin carbonFibre {
+	background:
+	radial-gradient(rgba($black, .5) 15%, transparent 16%) 0 0,
+	radial-gradient(rgba($black, .5) 15%, transparent 16%) 8px 8px,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	background-color:darken($white,70%);
+	background-size:16px 16px;
+}

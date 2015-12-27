@@ -3,11 +3,11 @@
 	margin: 0 (-$size__site-sidebar) 0 0;
 	width: $size__site-main;
 }
-
-.site-main {
-	margin: 0 $size__site-sidebar 0 0;
+@media screen and (min-width: 1160px){
+	.site-main {
+		margin: 0 $size__site-sidebar 0 0;
+	}
 }
-
 .site-content .widget-area {
 	float: right;
 	overflow: hidden;
@@ -17,4 +17,42 @@
 .site-footer {
 	clear: both;
 	width: $size__site-main;
+}
+
+.entry-content,
+.tag-links,
+.post-navigation,
+.posts-navigation,
+.comments-area,
+.paging-navigation {
+    position: relative;
+    max-width: 750px;
+    padding: 0 2rem;
+    margin: 0 auto;
+} // set all widths equal
+
+.posts-navigation,
+.post-navigation {
+	background: $lightGray;
+	margin-bottom: 1em;
+	padding: 20px;
+}
+
+
+@media screen and (max-width: 1159px) {
+	.content-area {
+		float: none;
+	}
+	.site-main {
+		margin: 0 auto;
+		width: auto;
+		max-width: 780px;
+	}
+	.site-content .widget-area {
+		display: block;
+        width: auto;
+        max-width: 780px;
+        float: none;
+        margin: 1em auto 0;
+    }
 }
