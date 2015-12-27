@@ -19,7 +19,10 @@
 	width: $size__site-main;
 }
 
-.entry-content,
+.entry-content {
+	padding: .5em;
+}
+
 .tag-links,
 .post-navigation,
 .posts-navigation,

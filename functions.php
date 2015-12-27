@@ -124,6 +124,10 @@ function topicalroots_scripts() {
 
 	wp_enqueue_script( 'topicalroots-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+	wp_enqueue_script( 'topicalroots-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jQuery'), '20140328', true );
+
+	wp_enqueue_script( 'topicalroots-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('topicalroots-superfish'), '20140328', true );
+
 	wp_enqueue_script( 'topicalroots-search', get_template_directory_uri() . '/js/search.js', array('jQuery'), '20140328', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

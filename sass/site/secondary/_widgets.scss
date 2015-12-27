@@ -1,8 +1,139 @@
 .widget {
-	margin: 0 0 1.5em;
+	margin: 1em;
+	
 
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
 	}
 }
+
+/* Search widget. */
+.widget_search .search-submit {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+9.0 Widgets
+--------------------------------------------------------------*/
+.widget {
+    font-family: $fontContent, sans-serif;
+    font-size: 16px;
+}
+
+.widget-title {
+    margin-bottom: 1em;
+    font-family: $fontTitle;
+    font-weight: 400;
+    font-size: 24px;
+    border-bottom: 2px solid $green;    
+}
+
+.widget a {
+    font-weight: 700;
+    color: $black;
+    text-decoration: none;
+    &:hover {
+    	text-decoration: underline;
+    }
+}
+
+.widget ul,
+.widget ol {
+    padding: 0;
+    margin: -1em 0 0;
+    list-style-type: none;
+}
+
+.widget li { padding: 10px 0 0; }
+
+.widget li ul,
+.widget li ol { margin-top: 0; }
+
+.widget li li { margin-left: 1.5em; }
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget */
+.widget_search .search-submit {
+	display: none;
+}
+
+.footer-widgets { 
+	margin: 0 auto; 
+	overflow: hidden; 
+	a {
+		color: $white;
+	}
+}
+#footer-widgets {
+	overflow: hidden;
+}
+.footer-widgets .widget-title,
+.footer-widgets .widget a:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.footer-widgets .widget {
+    float: left;
+    width: 320px;
+    margin: 0 20px 40px 20px;
+}
+
+//Custom Widgets
+
+.widget_recent_entries li:before,
+.widget_recent_comments li:before,
+.widget_archive li:before {
+    display: block;
+    float: left;
+    padding-top: 2px;
+    margin-left: -30px;
+    margin-top: -5px;
+    font-family: 'fontawesome';
+    font-size: 20px;
+    color: $green;
+} 
+
+.widget_recent_entries li,
+.widget_recent_comments li { margin: 0 0 5px 40px; }
+
+.widget_recent_entries li:before { content: "\f036"; }
+
+.widget_recent_comments li:before { content: "\f075"; }
+
+.widget_archive li { margin: 0 0 0 2.5em; }
+
+.widget_archive li:before { content: "\f187"; }
+
+.widget_nav_menu a,
+.widget_pages a {
+    display: block;
+    padding: 1em 0;
+    border-bottom: solid 1px hsl(0, 0%, 90%);
+}
+
+.widget_categories {
+	a {
+		color: $green;
+		text-transform: uppercase;
+	}
+}
+
+.widget_calendar {
+	border-radius: 5px;
+	text-align: center;
+	text-transform: uppercase;
+	border: 1px solid $green;
+	caption {
+			color: $white;
+			background: $green;
+		}
+}
+
+.widget_nav_menu li,
+.widget_pages li { padding-top: 0; }
