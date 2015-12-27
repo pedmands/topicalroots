@@ -7,7 +7,7 @@
 	font-family: $fontTitle;
 	font-weight: 300;
 	text-transform: uppercase;
-	background: $darkGray;
+	background: $charcoal;
 	text-align: center;
 	.menu {
 	    display: table;
@@ -17,45 +17,41 @@
 	ul {
 		list-style: none;
 		margin: 0;
-   	padding-left: 0;
+   		padding-left: 0;
 
 		ul {
 			float: left;
 			position: absolute;
 			left: -999em;
 			z-index: 99999;
-			background: $lightGray; //drop-down bg-color
-			
+			background: $lightGray; // first-level drop-down bg-color
+
+			a{
+				color: $charcoal; // first-level drop-down font color
+			} // ul ul a
+
 			ul {
 				left: -999em;
 				top: 0;
-				background: #848484;
-				// a {
-				// 	color: #ccc;
-				// }
-				a:hover {
-					background: $lightGray;
-					
+				background: $aqua; // second-level drown-down bg-color
+	
+				a:hover { // second-level drop-down hover colors
+					background: $charcoal !important;
+					color: $aqua;
 				}
-			}
+			} // ul ul ul
 
 			li {
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
 				}
-			}
-
-			:hover > a,
-			.focus > a {
-				background: #848484;
-			}
-
-			a:hover,
-			a.focus {
-				background: #848484;
-			}
-		}
+				&:hover > a,
+				&.focus >a {
+					background: $aqua; // first-level drop-down hover bg-color
+				}
+			} // ul ul li
+		} // ul ul
 
 		li:hover > ul,
 		li.focus > ul {
@@ -66,25 +62,26 @@
 	li {
 		float: left;
 		position: relative;
-		// border-right: 1px solid #333;
 		&:hover > a,
-		&.focus > a {
+		&.focus > a { //top-level hover colors ** cascades down throughout levels **
 			background: $lightGray;
+			color: $charcoal; 
 		}
 		&:last-child {
 			border-right: none;
 		}
-	}
+	} // li
+
 	a {
 		display: block;
 		padding: 10px 20px;
-	   font-size: 16px;
-	   text-decoration: none;
-	   color: $charcoal;
-	   @media screen and (max-width:660px) {
-	   	font-size: 20px;
+		font-size: 16px;
+		text-decoration: none;
+		color: $lightGray;
+		@media screen and (max-width:660px) {
+	   		font-size: 20px;
 	   }
-	}
+	} // a
 
 	.current_page_item > a,
 	.current-menu-item > a,
@@ -93,12 +90,13 @@
 		color: $black;
 		background: $green;
 	}
-}
+} // .main-navigation
 
 @media screen and (max-width: 660px) {
 	.menu {
 		width: 100%;
 	}
+
 	.menu-toggle {
 		display: inline-block;
 		float: left;
@@ -120,8 +118,8 @@
             font-weight: normal;
             color: white;
             
-         }
-	}
+         }// i
+	} // .menu-toggle
         
 	.main-navigation.toggled .nav-menu {
 		display: block;
@@ -142,6 +140,7 @@
 						left: 0;
 						display: block;
 						float: none;
+						
 					}
             }
 	}

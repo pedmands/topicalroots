@@ -459,7 +459,7 @@ a {
   font-family: "Oswald";
   font-weight: 300;
   text-transform: uppercase;
-  background: #848484;
+  background: #333333;
   text-align: center; }
   .main-navigation .menu {
     display: table;
@@ -474,20 +474,19 @@ a {
       left: -999em;
       z-index: 99999;
       background: #c3c3c3; }
+      .main-navigation ul ul a {
+        color: #333333; }
       .main-navigation ul ul ul {
         left: -999em;
         top: 0;
-        background: #848484; }
+        background: #28ccf4; }
         .main-navigation ul ul ul a:hover {
-          background: #c3c3c3; }
+          background: #333333 !important;
+          color: #28ccf4; }
       .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
         left: 100%; }
-      .main-navigation ul ul :hover > a,
-      .main-navigation ul ul .focus > a {
-        background: #848484; }
-      .main-navigation ul ul a:hover,
-      .main-navigation ul ul a.focus {
-        background: #848484; }
+      .main-navigation ul ul li:hover > a, .main-navigation ul ul li.focus > a {
+        background: #28ccf4; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
       left: auto; }
@@ -495,7 +494,8 @@ a {
     float: left;
     position: relative; }
     .main-navigation li:hover > a, .main-navigation li.focus > a {
-      background: #c3c3c3; }
+      background: #c3c3c3;
+      color: #333333; }
     .main-navigation li:last-child {
       border-right: none; }
   .main-navigation a {
@@ -503,7 +503,7 @@ a {
     padding: 10px 20px;
     font-size: 16px;
     text-decoration: none;
-    color: #333333; }
+    color: #c3c3c3; }
     @media screen and (max-width: 660px) {
       .main-navigation a {
         font-size: 20px; } }
@@ -851,7 +851,7 @@ a {
 
 .site-branding {
   text-align: center;
-  background: #fff;
+  background: #848484;
   vertical-align: middle;
   display: inline-block;
   width: 100%; }
