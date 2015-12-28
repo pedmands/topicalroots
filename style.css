@@ -849,6 +849,20 @@ a {
   width: 100%;
   z-index: 10000; }
 
+.header-image img {
+  display: block;
+  margin: 0 auto; }
+
+.header-background-image {
+  background: no-repeat center;
+  background-size: cover !important;
+  -moz-background-size: cover !important;
+  -webkit-background-size: cover !important; }
+
+.header-background-image .title-box {
+  background: #333;
+  background: rgba(0, 0, 0, 0.7); }
+
 .site-branding {
   text-align: center;
   background: #848484;
@@ -856,24 +870,25 @@ a {
   display: inline-block;
   width: 100%; }
   .site-branding .title-box {
-    background: #333333;
+    background: rgba(135, 188, 73, 0.75);
     max-width: 500px;
-    height: 50px;
-    margin: 10px auto;
-    padding: 0; }
+    height: 150px;
+    margin: 25px auto;
+    padding: 0;
+    border-radius: 5px; }
     @media screen and (max-width: 660px) {
       .site-branding .title-box {
         width: 100%;
         margin: 0;
         max-width: 100%;
-        height: 75px;
+        height: 200px;
         padding: 1em; } }
   .site-branding .site-title {
     font-family: "Amatic SC";
     font-weight: 700;
     letter-spacing: 10px;
     font-size: 2em;
-    margin: 0;
+    margin: 35px 0 0 0;
     display: inline-block;
     min-width: 200px;
     clear: none; }
@@ -882,7 +897,7 @@ a {
       width: 100%;
       display: inline-block;
       margin: 0 auto;
-      color: #87bc49;
+      color: #000;
       text-decoration: none;
       text-transform: uppercase; }
       .site-branding .site-title a:hover {
@@ -893,12 +908,18 @@ a {
         transform: scale(1, 1); }
         .site-branding .site-title a img:hover {
           transform: scale(1.5, 1.5); }
+  .site-branding .site-description {
+    color: #fff;
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0; }
   .site-branding .fa-search {
     transition: all .25s linear;
     color: #fff;
     background: #87bc49;
     position: absolute;
-    top: 10px;
+    top: 130px;
     right: 0;
     width: 40px;
     height: 40px;
@@ -906,16 +927,14 @@ a {
     text-align: center;
     vertical-align: middle;
     line-height: 40px;
-    margin: 5px 15px 0 0;
+    margin: 5px 20px 0 0;
     cursor: pointer; }
     .site-branding .fa-search:hover {
-      background: #87bc49;
-      color: #fff; }
-    @media screen and (max-width: 600px) {
+      background: #fff;
+      color: #87bc49; }
+    @media screen and (max-width: 660px) {
       .site-branding .fa-search {
-        position: absolute;
-        display: block;
-        float: none; } }
+        background: #333333; } }
 
 #search-container {
   width: 100%;
@@ -926,7 +945,7 @@ a {
   background-size: 100px 100px; }
 
 .search-box .search-field {
-  width: 380px;
+  width: 360px;
   float: right;
   clear: both;
   padding: 7px 10px;

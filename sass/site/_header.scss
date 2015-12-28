@@ -3,6 +3,24 @@
 	width: 100%;
 	z-index: 10000;
 }
+// CUSTOM HEADER IMAGE
+.header-image img {
+    display: block;
+    margin: 0 auto;
+}
+
+.header-background-image {
+    background: no-repeat center;
+    background-size: cover!important;
+    -moz-background-size: cover!important;
+    -webkit-background-size: cover!important;
+}
+
+.header-background-image .title-box {
+    background: #333;
+    background: hsla(0, 0%, 0%, .7);
+}
+// END CUSTOM HEADER IMAGE
 
 .site-branding {
 	text-align: center;
@@ -14,16 +32,17 @@
 	// 	border-bottom: 2px solid $green;
 	// }
 	.title-box {
-		background: $charcoal;
+		background: rgba($green,.75);
 		max-width: 500px;
-		height: 50px;
-		margin: 10px auto;
+		height: 150px;
+		margin: 25px auto;
 		padding: 0;
+		border-radius: 5px;
 		@media screen and (max-width: 660px) {
 			width: 100%;
 			margin: 0;
 			max-width: 100%;
-			height: 75px;
+			height: 200px;
 			padding: 1em;
 		}
 	}
@@ -32,7 +51,7 @@
 		font-weight: 700;
 		letter-spacing: 10px;
 		font-size: 2em;
-		margin: 0;
+		margin: 35px 0 0 0;
 		display: inline-block;
 		min-width: 200px;
 		clear: none;
@@ -41,7 +60,7 @@
 			width: 100%;
 			display: inline-block;
 			margin: 0 auto;
-			color: $green;
+			color: $black;
 			text-decoration: none;
 			text-transform: uppercase;
 			&:hover {
@@ -57,13 +76,21 @@
 			}
 		}// a
 	}// site-title
+
+	.site-description {
+		color: $white;
+		font-family: $fontContent;
+		font-weight: 400;
+		font-size: 18px;
+		margin: 0;
+	}
 	
 	.fa-search {
 		transition: all .25s linear;
 			color: #fff;
 			background: $green;
 			position: absolute;
-			top: 10px;
+			top: 130px;
 			right: 0;
 			width: 40px;
 			height: 40px;
@@ -71,16 +98,14 @@
 			text-align: center;
 			vertical-align: middle;
 			line-height: 40px;
-			margin: 5px 15px 0 0;
+			margin: 5px 20px 0 0;
 			cursor: pointer;
 			&:hover {
-				background: $green;
-				color: #fff;
+				background: $white;
+				color: $green;
 			}
-			@media screen and (max-width: 600px){
-				position: absolute;
-				display: block;
-				float: none;
+			@media screen and (max-width: 660px){
+				background: $charcoal;
 			}
 		}
 }// site-branding
@@ -95,7 +120,7 @@
 		}
 
 		.search-box .search-field {
-		    width: 380px;
+		    width: 360px;
 		    float: right;
 		    clear:both;
 		    padding: 7px 10px;
