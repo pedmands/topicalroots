@@ -3,11 +3,7 @@
 	margin: 0 (-$size__site-sidebar) 0 0;
 	width: $size__site-main;
 }
-@media screen and (min-width: 1160px){
-	.site-main {
-		margin: 0 $size__site-sidebar 0 0;
-	}
-}
+
 .site-content .widget-area {
 	float: right;
 	overflow: hidden;
@@ -41,6 +37,19 @@
 	padding: 20px;
 }
 
+.site-main {
+	padding-top: 15px;
+}
+
+.site-content {
+	background: $lightGray;
+}
+
+@media screen and (min-width: 1160px){
+	.site-main {
+		margin: 0 $size__site-sidebar 0 0;
+	}
+}
 
 @media screen and (max-width: 1159px) {
 	.content-area {

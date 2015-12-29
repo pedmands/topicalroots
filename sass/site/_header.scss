@@ -32,7 +32,7 @@
 	// 	border-bottom: 2px solid $green;
 	// }
 	.title-box {
-		background: rgba($green,.75);
+		background: $green;
 		max-width: 500px;
 		height: 150px;
 		margin: 25px auto;
@@ -49,7 +49,7 @@
 	.site-title {
 		font-family: $fontLogo;
 		font-weight: 700;
-		letter-spacing: 10px;
+		letter-spacing: 20px;
 		font-size: 2em;
 		margin: 35px 0 0 0;
 		display: inline-block;
