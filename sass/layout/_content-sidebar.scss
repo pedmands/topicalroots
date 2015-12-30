@@ -32,10 +32,36 @@
 
 .posts-navigation,
 .post-navigation {
-	background: $lightGray;
+	background: $black;
 	margin-bottom: 1em;
 	padding: 20px;
-}
+	a {
+		font-family: $fontTitle;
+		color: $white;
+		font-size: 18px;
+	}
+	.nav-links {
+		.nav-previous {
+			&:before {
+				font-family: 'fontawesome';
+				color: $white;
+				font-size: 18px;
+				content: '\f100';
+				margin-right: 5px;
+			}// &:before
+		}// .nav-previous
+		.nav-next {
+			&:after {
+				font-family: 'fontawesome';
+				color: $white;
+				font-size: 18px;
+				content: '\f101';
+				margin-left: 5px;
+			}// &:before
+		}// .nav-next
+
+	}// .nav-links
+}// .posts-navigation
 
 .site-content {
 	background: $darkGray url(images/pattern.svg) repeat;

@@ -1,4 +1,49 @@
+// - - - SINGLE POST & PAGE STYLES
+.single .post,
+.page .page {
+	max-width: 100%;
+	margin: 0;
+	margin-right: 10px;
+	padding: 2em;
+	padding-top: 0;
+	@media screen and (max-width: 1159px){
+		margin: 0 auto;
+		max-width: 880px;
+	}
+	@media screen and (max-width: 720px){
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+}
+.single .entry-title,
+.page .entry-title {
+	font-size: 46px;
+	line-height: 46px;
+}
+.single {
+	.hentry .title-block {
+		margin-left: 0;
+		padding-top: 1em;
+	}
+	.hentry .title-block .category-author {
+		font-size: 24px;
+	}
+	.post-navigation {
+		max-width: 100%;
+		margin-right: 10px;
+		margin-top: 10px;
+		@media screen and (max-width: 1159px){
+		margin: 0 auto;
+		margin-top: 10px;
+		max-width: 880px;
+		}
+	}// .post-navigation
+}// .single
+.page .entry-title {
+	color: $black;
+}
 
+// - - - GENERAL STYLES
 .blog-header {
 	width: 100%;
 	min-height: 100px;

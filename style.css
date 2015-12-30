@@ -503,7 +503,7 @@ a {
       border-right: none; }
   .main-navigation a {
     display: block;
-    padding: 5px 30px;
+    padding: 5px 20px;
     font-size: 16px;
     text-decoration: none;
     color: #c3c3c3; }
@@ -825,9 +825,28 @@ a {
 
 .posts-navigation,
 .post-navigation {
-  background: #c3c3c3;
+  background: #000;
   margin-bottom: 1em;
   padding: 20px; }
+  .posts-navigation a,
+  .post-navigation a {
+    font-family: "Oswald";
+    color: #fff;
+    font-size: 18px; }
+  .posts-navigation .nav-links .nav-previous:before,
+  .post-navigation .nav-links .nav-previous:before {
+    font-family: 'fontawesome';
+    color: #fff;
+    font-size: 18px;
+    content: '\f100';
+    margin-right: 5px; }
+  .posts-navigation .nav-links .nav-next:after,
+  .post-navigation .nav-links .nav-next:after {
+    font-family: 'fontawesome';
+    color: #fff;
+    font-size: 18px;
+    content: '\f101';
+    margin-left: 5px; }
 
 .site-content {
   background: #848484 url(images/pattern.svg) repeat; }
@@ -879,7 +898,7 @@ a {
   width: 100%; }
   .site-branding .title-box {
     background: rgba(0, 0, 0, 0.75);
-    max-width: 600px;
+    max-width: 500px;
     height: 75px;
     margin: 25px auto;
     padding: 0;
@@ -889,8 +908,9 @@ a {
         width: 100%;
         margin: 0;
         max-width: 100%;
-        height: 200px;
-        padding: 1em; } }
+        height: 110px;
+        padding: 1em;
+        border-radius: 0; } }
   .site-branding .site-title {
     font-family: "Amatic SC";
     font-weight: 700;
@@ -927,7 +947,7 @@ a {
     color: #fff;
     background: #87bc49;
     position: absolute;
-    top: 70px;
+    top: 60px;
     right: 0;
     width: 40px;
     height: 40px;
@@ -942,7 +962,9 @@ a {
       color: #87bc49; }
     @media screen and (max-width: 660px) {
       .site-branding .fa-search {
-        background: #333333; } }
+        top: 120px;
+        z-index: 1000;
+        border: 1px solid #fff; } }
 
 #search-container {
   width: 100%;
@@ -963,10 +985,55 @@ a {
   background-color: #fff;
   margin: 1em;
   border: 0; }
+  @media screen and (max-width: 660px) {
+    .search-box .search-field {
+      float: left;
+      width: 310px; } }
 
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.single .post,
+.page .page {
+  max-width: 100%;
+  margin: 0;
+  margin-right: 10px;
+  padding: 2em;
+  padding-top: 0; }
+  @media screen and (max-width: 1159px) {
+    .single .post,
+    .page .page {
+      margin: 0 auto;
+      max-width: 880px; } }
+  @media screen and (max-width: 720px) {
+    .single .post,
+    .page .page {
+      padding-left: 1em;
+      padding-right: 1em; } }
+
+.single .entry-title,
+.page .entry-title {
+  font-size: 46px;
+  line-height: 46px; }
+
+.single .hentry .title-block {
+  margin-left: 0;
+  padding-top: 1em; }
+.single .hentry .title-block .category-author {
+  font-size: 24px; }
+.single .post-navigation {
+  max-width: 100%;
+  margin-right: 10px;
+  margin-top: 10px; }
+  @media screen and (max-width: 1159px) {
+    .single .post-navigation {
+      margin: 0 auto;
+      margin-top: 10px;
+      max-width: 880px; } }
+
+.page .entry-title {
+  color: #000; }
+
 .blog-header {
   width: 100%;
   min-height: 100px;
@@ -1121,6 +1188,128 @@ a {
 .bypostauthor {
   display: block; }
 
+.comment-navigation {
+  padding: 1em 0;
+  margin: 3em 0;
+  border-top: #cccccc solid 1px;
+  border-bottom: #cccccc solid 1px; }
+
+.comment-navigation i {
+  margin: 0 1em; }
+
+/*--------------------------------------------------------------
+10.3 Comments
+--------------------------------------------------------------*/
+.comments-title {
+  font-size: 24px;
+  color: #fff;
+  background: #c3c3c3;
+  margin-bottom: 0;
+  text-align: center; }
+
+.comments-area > ol {
+  padding: 1em;
+  margin: 2em 0;
+  margin-top: 0;
+  list-style-type: none;
+  background: #fff;
+  border-left: 5px solid #c3c3c3; }
+
+ol.children {
+  list-style-type: none; }
+
+.comment-list ol {
+  margin-left: 50px; }
+
+.comment-meta {
+  margin-bottom: 1em; }
+
+.comment-author .avatar {
+  width: 50px;
+  display: block;
+  float: left;
+  margin-right: 20px; }
+
+.comment-author .fn {
+  font-weight: 900;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px; }
+
+.comment-metadata {
+  font-size: 14px; }
+
+.comment-content {
+  font-size: 90%; }
+
+.comment-content,
+.reply {
+  margin-left: 70px; }
+
+.comment-body {
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: solid #cccccc 1px; }
+
+.comment-content a {
+  word-wrap: break-word; }
+
+.comment-content ol {
+  margin-left: 1.5em; }
+
+.reply {
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px; }
+
+/* Comments responsive */
+@media screen and (max-width: 600px) {
+  .comment-list ol {
+    margin-left: 0; }
+
+  .comment-content ol {
+    margin-left: 1.5em; }
+
+  .comment-content,
+  .reply {
+    margin-left: 0; } }
+.bypostauthor > .comment-body {
+  position: relative;
+  padding: 1em;
+  margin-bottom: 2em;
+  background: #ededed;
+  border: none; }
+
+.comment-reply-title {
+  margin-bottom: .5em;
+  font-weight: 900;
+  font-size: 30px; }
+
+.comment-form {
+  padding-bottom: 4rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px; }
+
+.comment-form textarea {
+  font-family: 'PT Serif', serif;
+  font-size: 18px; }
+
+.comment-form label {
+  display: block; }
+
+.required {
+  color: red; }
+
+.comment-awaiting-moderation {
+  /* Green background color to make moderation seem less aggressive */
+  padding: .5rem 1rem;
+  margin: 1rem 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  color: white;
+  background: #84bd68;
+  background: #83bc67; }
+
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
@@ -1185,15 +1374,22 @@ object {
 .wp-caption {
   margin-bottom: 1.5em;
   max-width: 100%; }
-  .wp-caption img[class*="wp-image-"] {
-    display: block;
-    margin-left: auto;
-    margin-right: auto; }
-  .wp-caption .wp-caption-text {
-    margin: 0.8075em 0; }
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin: 0 auto; }
 
 .wp-caption-text {
   text-align: center; }
+
+.wp-caption .wp-caption-text {
+  padding: 0.8075em 1em;
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  background: #e5e5e5; }
+
+.alignnone {
+  margin: 0; }
 
 /*--------------------------------------------------------------
 ## Galleries
@@ -1225,5 +1421,67 @@ object {
 
 .gallery-caption {
   display: block; }
+
+/*--------------------------------------------------------------
+## Block Quotes
+--------------------------------------------------------------*/
+/* Blockquotes */
+blockquote {
+  padding: 1em 1.5em 0;
+  margin-bottom: 1em;
+  font-style: italic;
+  border-top: solid 1px #cccccc;
+  border-bottom: solid 1px #cccccc; }
+
+blockquote em {
+  font-style: normal; }
+
+blockquote cite {
+  display: block;
+  margin-top: 1em;
+  margin-left: 40%;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  line-height: 1.5em;
+  text-align: right; }
+
+blockquote.alignleft {
+  width: 50%;
+  float: left;
+  padding: 1em 0 0;
+  margin-right: 2em; }
+
+blockquote.alignright {
+  width: 50%;
+  float: right;
+  padding: 1em 0 0;
+  margin-left: 2em; }
+
+/* Blockquotes responsive */
+/* Optional rules that set blockquotes to full width on smaller screens */
+@media screen and (max-width: 780px) {
+  blockquote.alignleft,
+  blockquote.alignright {
+    width: 40%; } }
+@media screen and (max-width: 600px) {
+  blockquote.alignleft,
+  blockquote.alignright {
+    width: 100%;
+    padding: 1em 1.5em 0; } }
+/* Alignment responsive */
+@media screen and (min-width: 1320px) {
+  .alignleft {
+    margin-left: -60px; }
+
+  .single .alignleft {
+    margin-left: 0; } }
+@media screen and (min-width: 1320px) {
+  .alignright {
+    margin-right: -60px; }
+
+  .single .alignright {
+    margin-right: 0; } }
 
 /*# sourceMappingURL=style.css.map */
