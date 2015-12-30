@@ -1,14 +1,149 @@
+
+.blog-header {
+	width: 100%;
+	min-height: 100px;
+	background: $black;
+	color: $white;
+	display: table;
+	.blog-container {
+		// display: table-cell;
+		display: block;
+    	position: relative;
+    	max-width: 750px;
+    	height: 100px;
+    	padding: 0;
+    	margin: 0 auto;
+		h1 {
+			display: inline-block;
+			position: absolute;
+			bottom: 0;
+			margin: 0;
+			padding: 0;
+			margin-left: 20px;
+			text-transform: uppercase;
+			font-family: $fontTitle;
+			font-weight: 400;
+			font-size: 50px;
+			line-height: 45px;
+		}// h1
+		img {
+			display: inline-block;
+			margin-left: 10px;
+		}
+	} //blog container
+} // blog header
+
 .sticky {
 	display: block;
 }
 
 .hentry {
 	margin: 20px auto;
-	padding: 1em;
 	width: auto;
 	max-width: 750px;
 	background: $white;
-}
+	position: relative;
+	.entry-header {
+		padding: 10px;
+	}
+	.date-block {
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-align: center;
+		background: $aqua;
+		margin: 0;
+		padding: 1em;
+		width: 75px;
+		height: 75px;
+		a {
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $white;
+			font-size: 20px;
+			line-height: 12px;
+			font-weight: 700;
+		}// a
+	}// .date-block
+	.title-block {
+		display: inline-block;
+		margin-left: 80px;
+		height: 75px;
+		.entry-title {
+			display: inline-block;
+			margin: 0;
+			// margin-top: 10px;
+			text-transform: uppercase;
+			font-family: $fontTitle;
+			a {
+				color: $black;
+				text-decoration: none;
+				font-weight: 400;
+			}
+		}// .entry-title
+		.category-author {
+			display: block;
+			font-family: $fontTitle;
+			font-weight: 300;
+			font-size: 18px;
+			a {
+				color: $green;
+				text-decoration: none;
+				font-weight: 400;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}// .category-author
+	}// .title-block
+	.entry-footer {
+		ul {
+			list-style-type: none;
+			margin: 0;
+			margin-left: 15px;
+			padding: 0 0 15px 0;
+			li {
+				display: inline-block;
+				margin: 0 15px;
+				i {
+					font-size: 20px;
+					color: $green;
+				}
+				a {
+					font-family: $fontTitle;
+					color: $black;
+					margin-left: 5px;
+					text-decoration: none;
+					text-transform: uppercase;
+				}
+			}// li
+		}// ul
+		.comments {
+			text-align: right;
+			display: block;
+			width: 100%;
+			background: $charcoal;
+			margin: 0;
+			padding: 10px 15px;
+			a {
+				color: $green;
+				text-decoration: none;
+				&:hover {
+					font-style: italic;
+				}
+			}
+			.has-comment {
+				&:before {
+					font-family: 'fontawesome';
+					content: '\f075';
+					margin-right: 10px;
+				}
+			}
+		}
+	}// .entry-footer
+}// .hentry
+
 .entry-title {
 	a {
 		text-decoration: none;

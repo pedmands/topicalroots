@@ -107,6 +107,16 @@ function topicalroots_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+    'name'          => __( 'Footer Widgets', 'topicalroots' ),
+    'description'   => __( 'Footer widgets area appears in the footer of the site.', 'topicalroots' ),
+    'id'            => 'sidebar-2',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</aside>',
+    'before_title'  => '<h1 class="widget-title">',
+    'after_title'   => '</h1>',
+) );
 }
 add_action( 'widgets_init', 'topicalroots_widgets_init' );
 
@@ -129,6 +139,8 @@ function topicalroots_scripts() {
 	wp_enqueue_script( 'topicalroots-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('topicalroots-superfish'), '20140328', true );
 
 	wp_enqueue_script( 'topicalroots-search', get_template_directory_uri() . '/js/search.js', array('jQuery'), '20140328', true );
+
+	wp_enqueue_script( 'topicalroots-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20140401', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -11,19 +11,19 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php
-			if ( is_single() ) {
-				the_title( '<h1 class="entry-title">', '</h1>' );
-			} else {
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			}
-
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php topicalroots_posted_on(); ?>
+		<?php if ( 'post' === get_post_type() ) : ?>
+		<div class="date-block">
+			<?php topicalroots_posted_on('M'); ?>
 		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
+		<?php endif; ?>
+
+		<span class="title-block">
+            <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+            <div class="category-author">
+                <?php topicalroots_category_author(); ?>
+            </div>
+        </span>
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -42,6 +42,16 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php topicalroots_entry_footer(); ?>
+		<?php
+            echo get_the_tag_list( '<ul><li><i class="fa fa-tag"></i>', '</li><li><i class="fa fa-tag"></i>', '</li></ul>' );
+        ?>
+
+        <?php 
+	        if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) { 
+	        echo '<span class="comments">';
+	        comments_popup_link( __( 'Leave a comment', 'topicalroots' ), __( '<span class="has-comment">1 Comment</span>', 'topicalroots' ), __( '<span class="has-comment">% Comments</span>', 'topicalroots' ) );
+	        echo '</span>';
+	        }
+        ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

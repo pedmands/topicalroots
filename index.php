@@ -16,6 +16,11 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<div class="blog-header">
+                <span class="blog-container">
+                    <h1 id="blog-title">Blog<img src="<?php echo get_template_directory_uri() . '/images/pen-paper.png' ?>"></h1>
+                </span>
+            </div>
 
 		<?php
 		if ( have_posts() ) :

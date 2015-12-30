@@ -16,7 +16,7 @@
 }
 
 .entry-content {
-	padding: .5em;
+	padding: 0 1em 1em 1em;
 }
 
 .tag-links,
@@ -37,12 +37,8 @@
 	padding: 20px;
 }
 
-.site-main {
-	padding-top: 15px;
-}
-
 .site-content {
-	background: $lightGray;
+	background: $darkGray url(images/pattern.svg) repeat;
 }
 
 @media screen and (min-width: 1160px){
@@ -58,12 +54,12 @@
 	.site-main {
 		margin: 0 auto;
 		width: auto;
-		max-width: 780px;
+		// max-width: 780px;
 	}
 	.site-content .widget-area {
 		display: block;
         width: auto;
-        max-width: 780px;
+        max-width: 650px;
         float: none;
         margin: 1em auto 0;
     }

@@ -18,14 +18,14 @@ function topicalroots_posted_on() {
 	}
 
 	$time_string = sprintf( $time_string,
-		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_attr( get_the_modified_date( 'c' ) ),
-		esc_html( get_the_modified_date() )
+		esc_attr( get_the_date( 'M d' ) ),
+		esc_html( get_the_date('M d') ),
+		esc_attr( get_the_modified_date( 'M' ) ),
+		esc_html( get_the_modified_date('M') )
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'topicalroots' ),
+		esc_html_x( '%s', 'post date', 'topicalroots' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -34,7 +34,7 @@ function topicalroots_posted_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+	echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 
 }
 endif;
@@ -106,7 +106,23 @@ function topicalroots_categorized_blog() {
 		return false;
 	}
 }
-
+/**
+ * Prints HTML with meta information for the category and author.
+ */
+function topicalroots_category_author() {
+    // Hide category and tag text for pages.
+	if ( 'post' === get_post_type() ) {
+                $byline = sprintf(
+                    esc_html_x( ' by %s', 'post author', 'topical_roots' ),
+                    '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+                );
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( esc_html__( ', ', 'topical_roots' ) );
+		if ( $categories_list && topicalroots_categorized_blog() ) {
+			printf( '<span class="cat-links">' . esc_html__( 'Posted under %1$s', 'topical_roots' ) . $byline . '</span>', $categories_list ); // WPCS: XSS OK.
+		}
+	}
+}
 /**
  * Flush out the transients used in topicalroots_categorized_blog.
  */

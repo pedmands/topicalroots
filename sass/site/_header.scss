@@ -32,12 +32,13 @@
 	// 	border-bottom: 2px solid $green;
 	// }
 	.title-box {
-		background: $green;
-		max-width: 500px;
-		height: 150px;
+		background: rgba($black,.75);
+		max-width: 600px;
+		height: 75px;
 		margin: 25px auto;
 		padding: 0;
 		border-radius: 5px;
+
 		@media screen and (max-width: 660px) {
 			width: 100%;
 			margin: 0;
@@ -51,7 +52,7 @@
 		font-weight: 700;
 		letter-spacing: 20px;
 		font-size: 2em;
-		margin: 35px 0 0 0;
+		margin-top: 10px;
 		display: inline-block;
 		min-width: 200px;
 		clear: none;
@@ -69,9 +70,9 @@
 			img {
 				transition: all .5s ease-out;
 				padding: 10px;
-				transform: scale(1,1);
+				transform: scale(.9,.9);
 				&:hover {
-					transform: scale(1.5,1.5);
+					transform: scale(1,1);
 				}
 			}
 		}// a
@@ -90,7 +91,7 @@
 			color: #fff;
 			background: $green;
 			position: absolute;
-			top: 130px;
+			top: 70px;
 			right: 0;
 			width: 40px;
 			height: 40px;
@@ -116,7 +117,7 @@
 		}
 
 		.search-box {
-		    @include stripesDiag($green, lighten($green, 5%));
+		    @include stripesDiag($green, darken($green, 5%));
 		}
 
 		.search-box .search-field {

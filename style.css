@@ -811,7 +811,7 @@ a {
   width: 100%; }
 
 .entry-content {
-  padding: .5em; }
+  padding: 0 1em 1em 1em; }
 
 .tag-links,
 .post-navigation,
@@ -829,11 +829,8 @@ a {
   margin-bottom: 1em;
   padding: 20px; }
 
-.site-main {
-  padding-top: 15px; }
-
 .site-content {
-  background: #c3c3c3; }
+  background: #848484 url(images/pattern.svg) repeat; }
 
 @media screen and (min-width: 1160px) {
   .site-main {
@@ -844,13 +841,12 @@ a {
 
   .site-main {
     margin: 0 auto;
-    width: auto;
-    max-width: 780px; }
+    width: auto; }
 
   .site-content .widget-area {
     display: block;
     width: auto;
-    max-width: 780px;
+    max-width: 650px;
     float: none;
     margin: 1em auto 0; } }
 /*--------------------------------------------------------------
@@ -882,9 +878,9 @@ a {
   display: inline-block;
   width: 100%; }
   .site-branding .title-box {
-    background: #87bc49;
-    max-width: 500px;
-    height: 150px;
+    background: rgba(0, 0, 0, 0.75);
+    max-width: 600px;
+    height: 75px;
     margin: 25px auto;
     padding: 0;
     border-radius: 5px; }
@@ -900,7 +896,7 @@ a {
     font-weight: 700;
     letter-spacing: 20px;
     font-size: 2em;
-    margin: 35px 0 0 0;
+    margin-top: 10px;
     display: inline-block;
     min-width: 200px;
     clear: none; }
@@ -917,9 +913,9 @@ a {
       .site-branding .site-title a img {
         transition: all .5s ease-out;
         padding: 10px;
-        transform: scale(1, 1); }
+        transform: scale(0.9, 0.9); }
         .site-branding .site-title a img:hover {
-          transform: scale(1.5, 1.5); }
+          transform: scale(1, 1); }
   .site-branding .site-description {
     color: #fff;
     font-family: "Lato";
@@ -931,7 +927,7 @@ a {
     color: #fff;
     background: #87bc49;
     position: absolute;
-    top: 130px;
+    top: 70px;
     right: 0;
     width: 40px;
     height: 40px;
@@ -953,7 +949,7 @@ a {
   display: none; }
 
 .search-box {
-  background: linear-gradient(45deg, #87bc49 25%, #93c35c 0, #93c35c 50%, #87bc49 0, #87bc49 75%, #93c35c 0);
+  background: linear-gradient(45deg, #87bc49 25%, #7aac3f 0, #7aac3f 50%, #87bc49 0, #87bc49 75%, #7aac3f 0);
   background-size: 100px 100px; }
 
 .search-box .search-field {
@@ -971,15 +967,121 @@ a {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.blog-header {
+  width: 100%;
+  min-height: 100px;
+  background: #000;
+  color: #fff;
+  display: table; }
+  .blog-header .blog-container {
+    display: block;
+    position: relative;
+    max-width: 750px;
+    height: 100px;
+    padding: 0;
+    margin: 0 auto; }
+    .blog-header .blog-container h1 {
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      margin: 0;
+      padding: 0;
+      margin-left: 20px;
+      text-transform: uppercase;
+      font-family: "Oswald";
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 45px; }
+    .blog-header .blog-container img {
+      display: inline-block;
+      margin-left: 10px; }
+
 .sticky {
   display: block; }
 
 .hentry {
   margin: 20px auto;
-  padding: 1em;
   width: auto;
   max-width: 750px;
-  background: #fff; }
+  background: #fff;
+  position: relative; }
+  .hentry .entry-header {
+    padding: 10px; }
+  .hentry .date-block {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background: #28ccf4;
+    margin: 0;
+    padding: 1em;
+    width: 75px;
+    height: 75px; }
+    .hentry .date-block a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 20px;
+      line-height: 12px;
+      font-weight: 700; }
+  .hentry .title-block {
+    display: inline-block;
+    margin-left: 80px;
+    height: 75px; }
+    .hentry .title-block .entry-title {
+      display: inline-block;
+      margin: 0;
+      text-transform: uppercase;
+      font-family: "Oswald"; }
+      .hentry .title-block .entry-title a {
+        color: #000;
+        text-decoration: none;
+        font-weight: 400; }
+    .hentry .title-block .category-author {
+      display: block;
+      font-family: "Oswald";
+      font-weight: 300;
+      font-size: 18px; }
+      .hentry .title-block .category-author a {
+        color: #87bc49;
+        text-decoration: none;
+        font-weight: 400; }
+        .hentry .title-block .category-author a:hover {
+          text-decoration: underline; }
+  .hentry .entry-footer ul {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 15px;
+    padding: 0 0 15px 0; }
+    .hentry .entry-footer ul li {
+      display: inline-block;
+      margin: 0 15px; }
+      .hentry .entry-footer ul li i {
+        font-size: 20px;
+        color: #87bc49; }
+      .hentry .entry-footer ul li a {
+        font-family: "Oswald";
+        color: #000;
+        margin-left: 5px;
+        text-decoration: none;
+        text-transform: uppercase; }
+  .hentry .entry-footer .comments {
+    text-align: right;
+    display: block;
+    width: 100%;
+    background: #333333;
+    margin: 0;
+    padding: 10px 15px; }
+    .hentry .entry-footer .comments a {
+      color: #87bc49;
+      text-decoration: none; }
+      .hentry .entry-footer .comments a:hover {
+        font-style: italic; }
+    .hentry .entry-footer .comments .has-comment:before {
+      font-family: 'fontawesome';
+      content: '\f075';
+      margin-right: 10px; }
 
 .entry-title a {
   text-decoration: none;
@@ -1019,6 +1121,34 @@ a {
 .bypostauthor {
   display: block; }
 
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+.site-footer {
+  padding: 2em;
+  font-family: "Lato";
+  font-size: 16px;
+  color: #fff;
+  background: #333333; }
+
+.site-footer a {
+  color: #fff; }
+
+.site-info {
+  text-align: center; }
+
+#footer-widgets {
+  background: #333333; }
+
+/* Footer widgets responsive */
+@media screen and (max-width: 879px) {
+  #footer-widgets {
+    width: 100% !important; }
+
+  .footer-widgets .widget {
+    float: none;
+    width: 100%;
+    margin: 0 0 8rem; } }
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
