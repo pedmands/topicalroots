@@ -59,6 +59,10 @@ function topicalroots_setup() {
 		'caption',
 	) );
 
+	add_theme_support( 'post-thumbnails' );
+	add_image_size('large-thumb', 1060, 650, true);
+	add_image_size('index-thumb', 750, 250, true);
+
 	/*
 	 * Enable support for Post Formats.
 	 * See https://developer.wordpress.org/themes/functionality/post-formats/
