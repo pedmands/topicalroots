@@ -10,6 +10,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php
+// Display a thumb tack in the top right hand corner if this post is sticky
+if (is_sticky()) {
+    echo '<i class="fa fa-thumb-tack sticky-post"></i>';
+}
+?>
+
 	<header class="entry-header">
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="date-block">
@@ -25,6 +32,18 @@
         </span>
 
 	</header><!-- .entry-header -->
+	<?php
+if (has_post_thumbnail()) {
+    echo '<div class="small-index-thumbnail clear">';
+    echo '<a href="' . get_permalink() . '" title="' . __('Read ', 'topicalroots') . get_the_title() . '" rel="bookmark">';
+    echo the_post_thumbnail('index-thumb');
+    echo '</a>';
+    echo '</div>';
+} else {
+	echo '<div class="title-spacer">';
+	echo '</div>';
+}
+?>
 
 	<div class="entry-content">
 		<?php

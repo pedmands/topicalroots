@@ -479,9 +479,9 @@ a {
       .main-navigation ul ul ul {
         left: -999em;
         top: 0;
-        background: #87bc49; }
+        background: #8FB168; }
         .main-navigation ul ul ul a:hover {
-          background: #a0ca6e !important; }
+          background: #a8c28a !important; }
         .main-navigation ul ul ul li {
           border-top: none; }
       .main-navigation ul ul li {
@@ -489,7 +489,7 @@ a {
         .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
           left: 100%; }
         .main-navigation ul ul li:hover > a, .main-navigation ul ul li.focus > a {
-          background: #87bc49; }
+          background: #8FB168; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
       left: auto; }
@@ -515,7 +515,7 @@ a {
   .main-navigation .current_page_ancestor > a,
   .main-navigation .current-menu-ancestor > a {
     color: #333333;
-    background: #28ccf4; }
+    background: #83a7d8; }
 
 @media screen and (max-width: 660px) {
   .menu {
@@ -528,11 +528,11 @@ a {
     width: 50px;
     margin: 10px;
     border-radius: 3px;
-    background: #87bc49;
+    background: #8FB168;
     box-shadow: none; }
     .menu-toggle:hover {
       box-shadow: none;
-      background: #87bc49; }
+      background: #8FB168; }
     .menu-toggle i {
       text-align: center;
       vertical-align: middle;
@@ -581,6 +581,40 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+/*--------------------------------------------------------------
+## Paging Nav
+--------------------------------------------------------------*/
+.paging-navigation ul {
+  padding: 10px;
+  margin: 10px auto;
+  font-family: "Oswald";
+  font-size: 20px; }
+
+.paging-navigation li {
+  display: inline; }
+
+a.page-numbers,
+span.page-numbers {
+  padding: .3em .7em;
+  color: #fff;
+  font-weight: normal;
+  text-decoration: none; }
+
+a:hover.page-numbers {
+  text-decoration: underline; }
+
+.paging-navigation .current {
+  font-weight: bold;
+  color: #83a7d8; }
+
+.paging-navigation {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+  list-style-type: none;
+  background: #848484; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -690,7 +724,7 @@ a {
   font-family: "Oswald";
   font-weight: 400;
   font-size: 24px;
-  border-bottom: 2px solid #87bc49; }
+  border-bottom: 2px solid #8FB168; }
 
 .widget a {
   font-weight: 700;
@@ -752,7 +786,7 @@ a {
   margin-top: -5px;
   font-family: 'fontawesome';
   font-size: 20px;
-  color: #87bc49; }
+  color: #8FB168; }
 
 .widget_recent_entries li,
 .widget_recent_comments li {
@@ -777,17 +811,17 @@ a {
   border-bottom: solid 1px #e6e6e6; }
 
 .widget_categories a {
-  color: #87bc49;
+  color: #8FB168;
   text-transform: uppercase; }
 
 .widget_calendar {
   border-radius: 5px;
   text-align: center;
   text-transform: uppercase;
-  border: 1px solid #87bc49; }
+  border: 1px solid #8FB168; }
   .widget_calendar caption {
     color: #fff;
-    background: #87bc49; }
+    background: #8FB168; }
 
 .widget_nav_menu li,
 .widget_pages li {
@@ -796,6 +830,31 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+.page-header {
+  padding: 15px;
+  margin-bottom: 2em;
+  list-style-type: none;
+  background: #c3c3c3;
+  color: #333333; }
+  .page-header h1 {
+    margin: 0;
+    font-family: "Oswald";
+    font-weight: normal; }
+
+.page-header {
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+.taxonomy-description {
+  padding-top: 10px;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  border-top: 1px solid #848484; }
+  .taxonomy-description p {
+    margin: 0;
+    padding-bottom: 10px; }
+
 .content-area {
   float: left;
   margin: 0 -400px 0 0;
@@ -897,9 +956,9 @@ a {
   display: inline-block;
   width: 100%; }
   .site-branding .title-box {
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(131, 167, 216, 0.75);
     max-width: 500px;
-    height: 75px;
+    height: 185px;
     margin: 25px auto;
     padding: 0;
     border-radius: 5px; }
@@ -908,8 +967,7 @@ a {
         width: 100%;
         margin: 0;
         max-width: 100%;
-        height: 110px;
-        padding: 1em;
+        height: 185px;
         border-radius: 0; } }
   .site-branding .site-title {
     font-family: "Amatic SC";
@@ -930,12 +988,6 @@ a {
       text-transform: uppercase; }
       .site-branding .site-title a:hover {
         color: white; }
-      .site-branding .site-title a img {
-        transition: all .5s ease-out;
-        padding: 10px;
-        transform: scale(0.9, 0.9); }
-        .site-branding .site-title a img:hover {
-          transform: scale(1, 1); }
   .site-branding .site-description {
     color: #fff;
     font-family: "Lato";
@@ -945,9 +997,9 @@ a {
   .site-branding .fa-search {
     transition: all .25s linear;
     color: #fff;
-    background: #87bc49;
+    background: #8FB168;
     position: absolute;
-    top: 60px;
+    top: 165px;
     right: 0;
     width: 40px;
     height: 40px;
@@ -959,7 +1011,7 @@ a {
     cursor: pointer; }
     .site-branding .fa-search:hover {
       background: #fff;
-      color: #87bc49; }
+      color: #8FB168; }
     @media screen and (max-width: 660px) {
       .site-branding .fa-search {
         top: 120px;
@@ -971,7 +1023,7 @@ a {
   display: none; }
 
 .search-box {
-  background: linear-gradient(45deg, #87bc49 25%, #7aac3f 0, #7aac3f 50%, #87bc49 0, #87bc49 75%, #7aac3f 0);
+  background: linear-gradient(45deg, #8FB168 25%, #83a857 0, #83a857 50%, #8FB168 0, #8FB168 75%, #83a857 0);
   background-size: 100px 100px; }
 
 .search-box .search-field {
@@ -993,34 +1045,58 @@ a {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.sticky-post {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  color: red;
+  font-size: 30px !important; }
+
+.single .entry-content, .page .entry-content {
+  padding: 2em;
+  padding-top: 0; }
+  @media screen and (max-width: 675px) {
+    .single .entry-content, .page .entry-content {
+      padding: 15px;
+      padding-top: 0; } }
+
 .single .post,
 .page .page {
   max-width: 100%;
   margin: 0;
   margin-right: 10px;
-  padding: 2em;
   padding-top: 0; }
   @media screen and (max-width: 1159px) {
     .single .post,
     .page .page {
       margin: 0 auto;
       max-width: 880px; } }
-  @media screen and (max-width: 720px) {
-    .single .post,
-    .page .page {
-      padding-left: 1em;
-      padding-right: 1em; } }
 
 .single .entry-title,
 .page .entry-title {
   font-size: 46px;
-  line-height: 46px; }
+  line-height: 46px;
+  padding: 0 15px;
+  margin-bottom: 10px; }
+  @media screen and (max-width: 675px) {
+    .single .entry-title,
+    .page .entry-title {
+      padding: 0 5px;
+      font-size: 36px;
+      line-height: 36px; } }
 
 .single .hentry .title-block {
   margin-left: 0;
   padding-top: 1em; }
 .single .hentry .title-block .category-author {
-  font-size: 24px; }
+  font-size: 24px;
+  padding: 0 20px;
+  line-height: 24px; }
+  @media screen and (max-width: 675px) {
+    .single .hentry .title-block .category-author {
+      padding: 0 10px;
+      font-size: 18px;
+      line-height: 18px; } }
 .single .post-navigation {
   max-width: 100%;
   margin-right: 10px;
@@ -1032,7 +1108,8 @@ a {
       max-width: 880px; } }
 
 .page .entry-title {
-  color: #000; }
+  color: #000;
+  font-family: "Oswald"; }
 
 .blog-header {
   width: 100%;
@@ -1073,14 +1150,14 @@ a {
   background: #fff;
   position: relative; }
   .hentry .entry-header {
-    padding: 10px; }
+    padding: 5px; }
   .hentry .date-block {
     display: inline-block;
     position: absolute;
     top: 0;
     left: 0;
     text-align: center;
-    background: #28ccf4;
+    background: #83a7d8;
     margin: 0;
     padding: 1em;
     width: 75px;
@@ -1095,7 +1172,7 @@ a {
   .hentry .title-block {
     display: inline-block;
     margin-left: 80px;
-    height: 75px; }
+    height: 65px; }
     .hentry .title-block .entry-title {
       display: inline-block;
       margin: 0;
@@ -1107,11 +1184,12 @@ a {
         font-weight: 400; }
     .hentry .title-block .category-author {
       display: block;
-      font-family: "Oswald";
+      font-family: 'Lato';
+      font-style: italic;
       font-weight: 300;
       font-size: 18px; }
       .hentry .title-block .category-author a {
-        color: #87bc49;
+        color: #8FB168;
         text-decoration: none;
         font-weight: 400; }
         .hentry .title-block .category-author a:hover {
@@ -1126,7 +1204,7 @@ a {
       margin: 0 15px; }
       .hentry .entry-footer ul li i {
         font-size: 20px;
-        color: #87bc49; }
+        color: #8FB168; }
       .hentry .entry-footer ul li a {
         font-family: "Oswald";
         color: #000;
@@ -1141,7 +1219,7 @@ a {
     margin: 0;
     padding: 10px 15px; }
     .hentry .entry-footer .comments a {
-      color: #87bc49;
+      color: #8FB168;
       text-decoration: none; }
       .hentry .entry-footer .comments a:hover {
         font-style: italic; }
@@ -1182,6 +1260,14 @@ a {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+.comment-respond {
+  background: #c3c3c3;
+  padding: 15px;
+  margin-top: 1em; }
+
+.comment-reply-title {
+  font-family: "Oswald"; }
+
 .comment-content a {
   word-wrap: break-word; }
 
@@ -1338,6 +1424,13 @@ ol.children {
     float: none;
     width: 100%;
     margin: 0 0 8rem; } }
+/*--------------------------------------------------------------
+## 404/Search
+--------------------------------------------------------------*/
+.not-found .entry-title {
+  padding-left: 15px;
+  font-family: "Oswald"; }
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/

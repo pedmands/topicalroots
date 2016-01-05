@@ -1,3 +1,35 @@
+//- - - ARCHIVE PAGES
+.page-header {
+	padding: 15px;
+    margin-bottom: 2em;
+    list-style-type: none;
+    background: $lightGray;
+    color: $charcoal;
+    h1 { 
+    	margin: 0;
+    	font-family: $fontTitle;
+    	font-weight: normal;
+    }
+}
+
+.page-header {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.taxonomy-description {
+    padding-top: 10px;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    border-top: 1px solid $darkGray;
+    p {
+    	margin: 0;
+    	padding-bottom: 10px;
+    }
+}
+
+// - - - THE REST
 .content-area {
 	float: left;
 	margin: 0 (-$size__site-sidebar) 0 0;

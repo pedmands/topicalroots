@@ -45,7 +45,9 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			
+
+			topicalroots_paging_nav();
 
 		else :
 

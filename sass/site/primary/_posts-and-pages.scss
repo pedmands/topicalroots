@@ -1,24 +1,45 @@
+// - - - STICKY
+.sticky-post {
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+    color: red;
+    font-size: 30px !important;
+}
+
 // - - - SINGLE POST & PAGE STYLES
+.single, .page {
+	.entry-content {
+		padding: 2em;
+		padding-top: 0;
+		@media screen and (max-width: 675px){
+			padding: 15px;
+			padding-top: 0;
+		}
+	}
+}
 .single .post,
 .page .page {
 	max-width: 100%;
 	margin: 0;
 	margin-right: 10px;
-	padding: 2em;
 	padding-top: 0;
 	@media screen and (max-width: 1159px){
 		margin: 0 auto;
 		max-width: 880px;
-	}
-	@media screen and (max-width: 720px){
-		padding-left: 1em;
-		padding-right: 1em;
 	}
 }
 .single .entry-title,
 .page .entry-title {
 	font-size: 46px;
 	line-height: 46px;
+	padding: 0 15px;
+	margin-bottom: 10px;
+	@media screen and (max-width: 675px) {
+			padding: 0 5px;
+			font-size: 36px;
+			line-height: 36px;
+		}
 }
 .single {
 	.hentry .title-block {
@@ -27,6 +48,13 @@
 	}
 	.hentry .title-block .category-author {
 		font-size: 24px;
+		padding: 0 20px;
+		line-height: 24px;
+		@media screen and (max-width: 675px) {
+			padding: 0 10px;
+			font-size: 18px;
+			line-height: 18px;
+		}
 	}
 	.post-navigation {
 		max-width: 100%;
@@ -41,6 +69,7 @@
 }// .single
 .page .entry-title {
 	color: $black;
+	font-family: $fontTitle;
 }
 
 // - - - GENERAL STYLES
@@ -89,7 +118,7 @@
 	background: $white;
 	position: relative;
 	.entry-header {
-		padding: 10px;
+		padding: 5px;
 	}
 	.date-block {
 		display: inline-block;
@@ -114,7 +143,7 @@
 	.title-block {
 		display: inline-block;
 		margin-left: 80px;
-		height: 75px;
+		height: 65px;
 		.entry-title {
 			display: inline-block;
 			margin: 0;
@@ -129,7 +158,8 @@
 		}// .entry-title
 		.category-author {
 			display: block;
-			font-family: $fontTitle;
+			font-family: 'Lato';
+			font-style: italic;
 			font-weight: 300;
 			font-size: 18px;
 			a {

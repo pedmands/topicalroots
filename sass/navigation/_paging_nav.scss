@@ -1,0 +1,35 @@
+.paging-navigation ul {
+    padding: 10px;
+    margin: 10px auto;
+    font-family: $fontTitle;
+    font-size: 20px;
+}
+
+.paging-navigation li { display: inline; }
+
+a.page-numbers,
+span.page-numbers {
+     padding: .3em .7em;
+     color: $white;
+     font-weight: normal;
+     text-decoration: none;
+}
+
+a:hover.page-numbers {
+    text-decoration: underline;
+}
+
+.paging-navigation .current {
+    font-weight: bold;
+    color: $aqua;
+    
+}
+
+.paging-navigation {
+	text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    list-style-type: none;
+    background: $darkGray;
+} 

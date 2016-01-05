@@ -45,7 +45,7 @@
     ?>
     
 	    <div class="title-box">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri() . '/images/quick-logo.png' ?>"></a></h1>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri() . '/images/tr-logo.png' ?>"></a></h1>
 	    </div>
 
 		<div class="search-toggle">
