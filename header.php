@@ -46,6 +46,7 @@
     
 	    <div class="title-box">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri() . '/images/tr-logo.png' ?>"></a></h1>
+			<h2 class="site-description">Organic Topical Oils</h2>
 	    </div>
 
 		<div class="search-toggle">
@@ -61,10 +62,32 @@
 	        </div>
 	    </div> 
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-
+	
+<nav class="navbar navbar-inverse" role="navigation">
+ 
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-brand"><img src="<?php echo get_template_directory_uri() . '/images/sm-logo.png' ?>"></div>
+    </div> <!-- navbar-header -->
+    <div class="collapse navbar-collapse" id="collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#featured">Blog</a></li>
+        <li><a href="#mission">Ingredients</a></li>
+        <li><a href="#services">Sample</a></li>
+        <li><a href="#staff">Pricing</a></li>
+        <li><a href="#testimonials">Uses</a></li>
+        <li><a href="#testimonials">Our Story</a></li>
+        <li><a href="#testimonials">FAQ</a></li>
+        <li><a href="#testimonials">Survey</a></li>
+        <li><a href="#testimonials">Contact</a></li>
+      </ul>
+    </div><!-- collapse -->
+</nav><!-- navigation -->
 				
 		</nav><!-- #site-navigation -->
 

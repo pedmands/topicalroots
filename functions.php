@@ -128,13 +128,20 @@ add_action( 'widgets_init', 'topicalroots_widgets_init' );
  * Enqueue scripts and styles.
  */
 function topicalroots_scripts() {
+
+	wp_enqueue_style('topicalroots-boostrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
+
 	wp_enqueue_style( 'topicalroots-style', get_stylesheet_uri() );
 
 	wp_enqueue_style('topical_roots-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
 
 	wp_enqueue_script('jQuery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js');
 
+	wp_enqueue_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array('jQuery'). '20160108', true);
+
 	wp_enqueue_script( 'topicalroots-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+
+	wp_enqueue_script( 'topicalroots-custom-script', get_template_directory_uri() . '/js/myscript.js', array(), '20160106', true );
 
 	wp_enqueue_script( 'topicalroots-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 

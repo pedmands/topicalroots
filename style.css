@@ -232,8 +232,6 @@ select,
 textarea {
   color: #404040;
   font-family: sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -334,6 +332,8 @@ img {
 table {
   margin: 0 0 1.5em;
   width: 100%; }
+  table th {
+    text-align: center; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -507,6 +507,9 @@ a {
     font-size: 16px;
     text-decoration: none;
     color: #c3c3c3; }
+    @media screen and (max-width: 780px) {
+      .main-navigation a {
+        padding: 5px 13px; } }
     @media screen and (max-width: 660px) {
       .main-navigation a {
         font-size: 20px; } }
@@ -515,7 +518,7 @@ a {
   .main-navigation .current_page_ancestor > a,
   .main-navigation .current-menu-ancestor > a {
     color: #333333;
-    background: #83a7d8; }
+    background: #89a9d5; }
 
 @media screen and (max-width: 660px) {
   .menu {
@@ -606,7 +609,7 @@ a:hover.page-numbers {
 
 .paging-navigation .current {
   font-weight: bold;
-  color: #83a7d8; }
+  color: #89a9d5; }
 
 .paging-navigation {
   text-align: center;
@@ -615,6 +618,41 @@ a:hover.page-numbers {
   margin-bottom: 2em;
   list-style-type: none;
   background: #848484; }
+
+/*--------------------------------------------------------------
+## Nav Bar
+--------------------------------------------------------------*/
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0; }
+  .navbar a {
+    font-family: "Oswald";
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 300; }
+    @media screen and (min-width: 874px) {
+      .navbar a {
+        font-size: 16px; } }
+    @media screen and (max-width: 767px) {
+      .navbar a {
+        font-size: 24px; } }
+  @media screen and (min-width: 930px) {
+    .navbar {
+      padding: 0 25px; } }
+  @media screen and (min-width: 1152px) {
+    .navbar {
+      padding: 0 10%; } }
+  .navbar .navbar-brand {
+    transition: all .5s ease-in-out;
+    width: 170px;
+    opacity: 0; }
+
+.stickynav {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -821,7 +859,9 @@ a:hover.page-numbers {
   border: 1px solid #8FB168; }
   .widget_calendar caption {
     color: #fff;
-    background: #8FB168; }
+    background: #8FB168;
+    margin: 0 auto;
+    text-align: center; }
 
 .widget_nav_menu li,
 .widget_pages li {
@@ -870,7 +910,7 @@ a:hover.page-numbers {
   width: 100%; }
 
 .entry-content {
-  padding: 0 1em 1em 1em; }
+  padding: 1em; }
 
 .tag-links,
 .post-navigation,
@@ -878,7 +918,7 @@ a:hover.page-numbers {
 .comments-area,
 .paging-navigation {
   position: relative;
-  max-width: 750px;
+  max-width: 75%;
   padding: 0 2rem;
   margin: 0 auto; }
 
@@ -956,50 +996,45 @@ a:hover.page-numbers {
   display: inline-block;
   width: 100%; }
   .site-branding .title-box {
-    background: rgba(131, 167, 216, 0.75);
-    max-width: 500px;
-    height: 185px;
-    margin: 25px auto;
-    padding: 0;
-    border-radius: 5px; }
-    @media screen and (max-width: 660px) {
-      .site-branding .title-box {
-        width: 100%;
-        margin: 0;
-        max-width: 100%;
-        height: 185px;
-        border-radius: 0; } }
+    background: rgba(156, 183, 220, 0.5);
+    position: relative;
+    max-width: 100%;
+    height: 250px;
+    margin: 50px auto;
+    padding: 0; }
   .site-branding .site-title {
-    font-family: "Amatic SC";
-    font-weight: 700;
-    letter-spacing: 20px;
-    font-size: 2em;
-    margin-top: 10px;
-    display: inline-block;
-    min-width: 200px;
-    clear: none; }
-    .site-branding .site-title a {
-      transition: all 1s ease-in-out;
-      width: 100%;
-      display: inline-block;
-      margin: 0 auto;
-      color: #000;
-      text-decoration: none;
-      text-transform: uppercase; }
-      .site-branding .site-title a:hover {
-        color: white; }
+    margin: 0; }
+    @media screen and (min-width: 720px) {
+      .site-branding .site-title {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20%; } }
+    @media screen and (max-width: 719px) {
+      .site-branding .site-title img {
+        margin-top: 20px;
+        margin-bottom: 20px; } }
   .site-branding .site-description {
     color: #fff;
-    font-family: "Lato";
-    font-weight: 400;
-    font-size: 18px;
+    font-family: "Oswald";
+    font-weight: 300;
+    text-transform: uppercase;
     margin: 0; }
+    @media screen and (min-width: 720px) {
+      .site-branding .site-description {
+        font-size: 36px;
+        line-height: 40px;
+        width: 30px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 30%; } }
   .site-branding .fa-search {
     transition: all .25s linear;
     color: #fff;
     background: #8FB168;
     position: absolute;
-    top: 165px;
+    top: 350px;
     right: 0;
     width: 40px;
     height: 40px;
@@ -1012,11 +1047,6 @@ a:hover.page-numbers {
     .site-branding .fa-search:hover {
       background: #fff;
       color: #8FB168; }
-    @media screen and (max-width: 660px) {
-      .site-branding .fa-search {
-        top: 120px;
-        z-index: 1000;
-        border: 1px solid #fff; } }
 
 #search-container {
   width: 100%;
@@ -1047,8 +1077,8 @@ a:hover.page-numbers {
 --------------------------------------------------------------*/
 .sticky-post {
   position: absolute;
-  top: 1rem;
-  right: 3rem;
+  top: .5em;
+  right: 1em;
   color: red;
   font-size: 30px !important; }
 
@@ -1149,6 +1179,9 @@ a:hover.page-numbers {
   max-width: 750px;
   background: #fff;
   position: relative; }
+  @media screen and (min-width: 1500px) {
+    .hentry {
+      max-width: 950px; } }
   .hentry .entry-header {
     padding: 5px; }
   .hentry .date-block {
@@ -1157,7 +1190,7 @@ a:hover.page-numbers {
     top: 0;
     left: 0;
     text-align: center;
-    background: #83a7d8;
+    background: #89a9d5;
     margin: 0;
     padding: 1em;
     width: 75px;
@@ -1584,6 +1617,13 @@ blockquote.alignright {
   background: #b2b2b2 url(images/pattern.svg) repeat; }
 
 .single-post-thumbnail img {
+  display: block;
+  margin: 0 auto; }
+
+.small-index-thumbnail {
+  background: #8FB168 url(images/pattern.svg) repeat; }
+
+.small-index-thumbnail img {
   display: block;
   margin: 0 auto; }
 

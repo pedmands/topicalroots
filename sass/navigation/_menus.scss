@@ -83,6 +83,9 @@
 		font-size: 16px;
 		text-decoration: none;
 		color: $lightGray;
+		@media screen and (max-width:780px){
+			padding: 5px 13px;
+		}
 		@media screen and (max-width:660px) {
 	   		font-size: 20px;
 	   }
