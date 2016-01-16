@@ -72,19 +72,19 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
       </button>
-      <div class="navbar-brand"><img src="<?php echo get_template_directory_uri() . '/images/sm-logo.png' ?>"></div>
+      <div class="navbar-brand"><a href="http://topical/"><img src="<?php echo get_template_directory_uri() . '/images/sm-logo.png' ?>"></a></div>
     </div> <!-- navbar-header -->
     <div class="collapse navbar-collapse" id="collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="#featured">Blog</a></li>
-        <li><a href="#mission">Ingredients</a></li>
-        <li><a href="#services">Sample</a></li>
-        <li><a href="#staff">Pricing</a></li>
-        <li><a href="#testimonials">Uses</a></li>
-        <li><a href="#testimonials">Our Story</a></li>
-        <li><a href="#testimonials">FAQ</a></li>
-        <li><a href="#testimonials">Survey</a></li>
-        <li><a href="#testimonials">Contact</a></li>
+        <li <?php if (!is_front_page()) {?> class="active" <?php } ?>><a href="blog">Blog</a></li>
+        <li><a href="<?php if (!is_front_page()) {?>http://topical/<?php } ?>#ingredients">Ingredients</a></li>
+        <li><a href="<?php if (!is_front_page()) {?>http://topical/<?php } ?>#sample">Sample</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#uses">Uses</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#survey">Survey</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div><!-- collapse -->
 </nav><!-- navigation -->

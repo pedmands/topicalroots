@@ -644,8 +644,17 @@ a:hover.page-numbers {
       padding: 0 10%; } }
   .navbar .navbar-brand {
     transition: all .5s ease-in-out;
-    width: 170px;
-    opacity: 0; }
+    width: 190px;
+    opacity: 0;
+    padding-top: 10px;
+    padding-right: 0; }
+
+.nav > li > a {
+  padding-left: 10px; }
+
+.navbar-inverse .navbar-nav > li > a .active {
+  background: #000;
+  color: #fff; }
 
 .stickynav {
   position: fixed;

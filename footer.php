@@ -15,12 +15,10 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
-		<?php get_sidebar( 'footer' ); ?>
+		<?php if(!is_front_page()) { get_sidebar( 'footer' ); } ?>
 		
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'topicalroots' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'topicalroots' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'topicalroots' ), 'topicalroots', '<a href="http://underscores.me/" rel="designer">Preston Edmands</a>' ); ?>
+			For consulting, investment, and other business related inquiries contact mainerootsconsulting@gmail.com <span class="sep"> | </span> 207-219-8959
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

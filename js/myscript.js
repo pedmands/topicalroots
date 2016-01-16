@@ -29,36 +29,39 @@ $(window).scroll(function() {
 // Nav Highlighting
 $(window).scroll(function(){
 
-  var windowPos = $(window).scrollTop() + 60;
-  $('nav li a').removeClass('active');
+  var windowPos = $(window).scrollTop() + 70;
+  $('nav li a').css({'background' : 'none', 'color' : '#9d9d9d'});
 
-  if (windowPos > $('#about').offset().top) {
-    $('nav li a').removeClass('active');
-    $('a[href$="#about"]').addClass('active');
+  if (windowPos > $('#ingredients').offset().top) {
+    $('nav li a').css({'background' : 'none', 'color' : '#9d9d9d'});
+    $('a[href$="#ingredients"]').css({'background' : '#000', 'color' : '#fff'});
   }
 
-  if (windowPos > $('#classes').offset().top) {
-    $('nav li a').removeClass('active');
-    $('a[href$="#classes"]').addClass('active');
+  if (windowPos > $('#sample').offset().top) {
+    $('nav li a').css({'background' : 'none', 'color' : '#9d9d9d'});
+    $('a[href$="#sample"]').css({'background' : '#000', 'color' : '#fff'});
   }
 
-  if (windowPos > $('#coaches').offset().top) {
-    $('nav li a').removeClass('active');
-    $('a[href$="#coaches"]').addClass('active');
+  if (windowPos > $('#pricing').offset().top) {
+    $('nav li a').css({'background' : 'none', 'color' : '#9d9d9d'});
+    $('a[href$="#pricing"]').css({'background' : '#000', 'color' : '#fff'});
   }
 
-  if (windowPos > $('#schedule').offset().top) {
-    $('nav li a').removeClass('active');
-    $('a[href$="#schedule"]').addClass('active');
+  if (windowPos > $('#uses').offset().top) {
+    $('nav li a').css({'background' : 'none', 'color' : '#9d9d9d'});
+    $('a[href$="#uses"]').css({'background' : '#000', 'color' : '#fff'});
   }
 
-  if (windowPos > $('#location').offset().top) {
-    $('nav li a').removeClass('active');
-    $('a[href$="#location"]').addClass('active');
+  if (windowPos > $('#story').offset().top) {
+    $('nav li a').css({'background' : 'none', 'color' : '#9d9d9d'});
+    $('a[href$="#story"]').css({'background' : '#000', 'color' : '#fff'});
   }
 
-  stickyNav();
-  logoBgFader();
+  if (windowPos > $('#faq').offset().top) {
+    $('nav li a').css({'background' : 'none', 'color' : '#9d9d9d'});
+    $('a[href$="#faq"]').css({'background' : '#000', 'color' : '#fff'});
+  }
+
 });
 
 //Smooth Scrolling
@@ -68,7 +71,7 @@ $('a[href*=#]:not([href=#])').click(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: target.offset().top
+          scrollTop: target.offset().top - 50
         }, 2000);
         return false;
       }
