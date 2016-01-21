@@ -29,6 +29,9 @@
 }// navbar
 .nav>li>a {
 	padding-left: 10px;
+	&:hover {
+		color: $white !important;
+	}
 }
 .navbar-inverse .navbar-nav>li>a .active {
 	background: $black;

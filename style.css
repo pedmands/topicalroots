@@ -651,6 +651,8 @@ a:hover.page-numbers {
 
 .nav > li > a {
   padding-left: 10px; }
+  .nav > li > a:hover {
+    color: #fff !important; }
 
 .navbar-inverse .navbar-nav > li > a .active {
   background: #000;
