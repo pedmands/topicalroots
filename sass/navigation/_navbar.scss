@@ -4,11 +4,8 @@
 	a {
 		font-family: $fontTitle;
 		text-transform: uppercase;
-		font-size: 12px;
+		font-size: 16px;
 		font-weight: 300;
-		@media screen and (min-width:874px){
-			font-size: 16px;
-		}
 		@media screen and (max-width:767px){
 			font-size: 24px;
 		}
@@ -27,6 +24,13 @@
 		padding-right: 0;
 	}
 }// navbar
+.navbar-toggle {
+	box-shadow: none;
+	border: none;
+	&:hover {
+		box-shadow: none;
+	}
+}
 .nav>li>a {
 	padding-left: 10px;
 	&:hover {

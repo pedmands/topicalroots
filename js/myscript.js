@@ -30,16 +30,11 @@ $(window).scroll(function() {
 $(window).scroll(function(){
 
   var windowPos = $(window).scrollTop() + 70;
-  $('nav li a').css({'background' : 'none', 'color' : '#9d9d9d'});
+  $('a[href$="#ingredients"]').css({'background' : 'none', 'color' : '#9d9d9d'});
 
   if (windowPos > $('#ingredients').offset().top) {
     $('nav li a').css({'background' : 'none', 'color' : '#9d9d9d'});
     $('a[href$="#ingredients"]').css({'background' : '#000', 'color' : '#fff'});
-  }
-
-  if (windowPos > $('#sample').offset().top) {
-    $('nav li a').css({'background' : 'none', 'color' : '#9d9d9d'});
-    $('a[href$="#sample"]').css({'background' : '#000', 'color' : '#fff'});
   }
 
   if (windowPos > $('#pricing').offset().top) {

@@ -628,11 +628,8 @@ a:hover.page-numbers {
   .navbar a {
     font-family: "Oswald";
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 300; }
-    @media screen and (min-width: 874px) {
-      .navbar a {
-        font-size: 16px; } }
     @media screen and (max-width: 767px) {
       .navbar a {
         font-size: 24px; } }
@@ -648,6 +645,12 @@ a:hover.page-numbers {
     opacity: 0;
     padding-top: 10px;
     padding-right: 0; }
+
+.navbar-toggle {
+  box-shadow: none;
+  border: none; }
+  .navbar-toggle:hover {
+    box-shadow: none; }
 
 .nav > li > a {
   padding-left: 10px; }
@@ -1451,7 +1454,8 @@ ol.children {
   background: #333333; }
 
 .site-footer a {
-  color: #fff; }
+  color: #fff;
+  text-decoration: underline; }
 
 .site-info {
   text-align: center; }
