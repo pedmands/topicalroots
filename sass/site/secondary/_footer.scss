@@ -28,3 +28,16 @@
         margin: 0 0 8rem;
     }
 }
+
+footer {
+    .disclaimer {
+        margin: 10px auto;
+        padding: 10px;
+        color: lighten($charcoal,20%);
+        font-style: italic;
+        background: darken($charcoal, 10%);
+    @media screen and (min-width: 530px){
+        max-width: 75%;
+        }
+    }// .disclaimer
+}// footer

@@ -1472,6 +1472,16 @@ ol.children {
     float: none;
     width: 100%;
     margin: 0 0 8rem; } }
+footer .disclaimer {
+  margin: 10px auto;
+  padding: 10px;
+  color: #666666;
+  font-style: italic;
+  background: #1a1a1a; }
+  @media screen and (min-width: 530px) {
+    footer .disclaimer {
+      max-width: 75%; } }
+
 /*--------------------------------------------------------------
 ## 404/Search
 --------------------------------------------------------------*/

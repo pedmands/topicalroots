@@ -76,14 +76,14 @@
     </div> <!-- navbar-header -->
     <div class="collapse navbar-collapse" id="collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li <?php if (!is_front_page() && !is_page('patient-survey') && !is_page('the-topical-roots-story')) {?> class="active" <?php } ?>><a href="blog">Blog</a></li>
+        <li <?php if (!is_front_page() && !is_page('patient-survey') && !is_page('the-topical-roots-story') && !is_page('contact-us')) {?> class="active" <?php } ?>><a href="blog">Blog</a></li>
         <li><a href="<?php if (!is_front_page()) {?>http://topical/<?php } ?>#ingredients">Ingredients</a></li>
         <li><a href="<?php if (!is_front_page()) {?>http://topical/<?php } ?>#pricing">Pricing</a></li>
         <li><a href="<?php if (!is_front_page()) {?>http://topical/<?php } ?>#uses">Uses</a></li>
         <li><a href="<?php if (!is_front_page()) {?>http://topical/<?php } ?>#story">Our Story</a></li>
         <li><a href="<?php if (!is_front_page()) {?>http://topical/<?php } ?>#faq">FAQ</a></li>
         <li<?php if (is_page('patient-survey')) {?> class="active" <?php } ?>><a href="http://topical/patient-survey" target="_blank">Survey</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li<?php if (is_page('contact-us')) {?> class="active" <?php } ?>><a href="http://topical/contact-us" target="_blank">Contact</a></li>
       </ul>
     </div><!-- collapse -->
 </nav><!-- navigation -->
